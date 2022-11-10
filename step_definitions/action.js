@@ -10,20 +10,20 @@ Given(/^The Epam Career page is opened$/, async () => {
     await Career.handleCookie();
 });
 
-When(/^Click on ([^"]+)$/, async elementName => {
+When(/^Click on "([^"]+)"$/, async elementName => {
     await Career.clickOnElement(elementName);
 });
 
-When(/^Apply button of ([^"]+) is clicked$/, async positionName => {
+When(/^Apply button of "([^"]+)" is clicked$/, async positionName => {
     const applyElement = await Element.findElementWithWaitXpath(`.//li[contains(@class,\"search-result__item\")][.//a[contains(@class,\"search-result__item-name\")][contains(text(),\"${positionName}\")]]//a[contains(@class,\"search-result__item-apply\")]`)
     await applyElement.click();
 });
 
-When(/^Select `([^"]+)` \/ `([^"]+)`$/, async (countryName, cityName) => {
+When(/^Select "([^"]+)" \/ "([^"]+)"$/, async (countryName, cityName) => {
     await Career.selectLocation(countryName, cityName);
 });
 
-When(/^Select ([^"]+) element$/, async elementName => {
+When(/^Select "([^"]+)" element$/, async elementName => {
     const selectedElementSelector = `//span[contains(@class, 'checkbox-custom-label')][contains(text(), '${elementName}')]`;
     const selectedElement = await Element.waitUntilElementIsVisibleXpath(selectedElementSelector);
     await selectedElement.click();

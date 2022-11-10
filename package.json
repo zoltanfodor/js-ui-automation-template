@@ -1,20 +1,20 @@
 {
-  "name": "js-ui-automation",
+  "name": "protractor-js-ui-automation",
   "version": "1.0.0",
-  "description": "JavaScript UI automation project which is the base of my University thesis",
+  "description": "JavaScript based UI automation project using protractor",
   "scripts": {
-    "test:module-5": "cucumber-js features/EPAM.feature --require step_definitions/*.js --require support/*.js"
+    "test": "cucumber-js features/EPAM.feature --require step_definitions/*.js --require support/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zoltanfodor/js-ui-automation.git"
+    "url": "git+https://github.com/zoltanfodor/protractor-js-ui-automation.git"
   },
   "author": "Zoltan Fodor <Zoltan_Fodor1@epam.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zoltanfodor/js-ui-automation/issues"
+    "url": "https://github.com/zoltanfodor/protractor-js-ui-automation/issues"
   },
-  "homepage": "https://github.com/zoltanfodor/js-ui-automation#readme",
+  "homepage": "https://github.com/zoltanfodor/protractor-js-ui-automation#readme",
   "dependencies": {
     "chai": "^4.3.6",
     "chromedriver": "^106.0.1",

@@ -18,7 +18,7 @@ Then(/^The search form is visible$/, async () => {
     expect(await Career.isSearchFormLoaded()).to.be.true;
 });
 
-Then(/^The ([^"]+) should contain "([^"]+)"$/, async (elementName, text) => {
+Then(/^The "([^"]+)" should contain "([^"]+)"$/, async (elementName, text) => {
     const element = await Career.findElementByElementName(elementName);
     expect(await element.getText()).to.equal(text);
 });
@@ -30,21 +30,21 @@ Then(/^The Department filter box should contain "([^"]+)" tile$/, async title =>
     expect(elementText).to.be.equal(title);
 });
 
-Then(/^The `([^"]+)` position should be visible$/, async positionName => {
+Then(/^The "([^"]+)" position should be visible$/, async positionName => {
     const element = await Element.findElementWithWaitXpath(`.//li[contains(@class,\"search-result__item\")][.//a[contains(@class,\"search-result__item-name\")][contains(text(),\"${positionName}\")]]`);
     expect(await element.getText()).to.contain(positionName);
 });
 
-Then(/^The department of the position should be `([^"]+)`$/, async departmentName => {
+Then(/^The department of the position should be "([^"]+)"$/, async departmentName => {
     const selectedDepartment = await Career.findElementByElementName("Selected Department");
 
     expect(await selectedDepartment.getText()).to.be.equal(departmentName.toUpperCase());
 });
 
-Then(/^The location of the position should be `([^"]+)`, `([^"]+)`$/, async (cityName, countryName) => {
+Then(/^The location of the position should be "([^"]+)"$/, async (countryName) => {
     const location = await Career.findElementByElementName("Position Location");
 
-    expect(await location.getText()).to.contain((cityName + ", " + countryName).toUpperCase());
+    expect(await location.getText()).to.contain((countryName).toUpperCase());
 });
 
 Then(/^There should be an Apply button for the `([^"]+)` position$/, async positionName => {
@@ -55,6 +55,6 @@ Then(/^The "([^"]+)" should contain "([^"]+)" text$/, async (elementName, text) 
     expect(await Detailed.getElementText(elementName)).to.contain(text);
 });
 
-Then(/^The "Detailed" page should be opened$/, async () => {
+Then(/^The Detailed page should be opened$/, async () => {
     expect(await Detailed.isPageOpened()).to.be.true;
 });

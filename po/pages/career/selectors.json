@@ -1,5 +1,5 @@
 {
-  "Cookie Accept Button": ".cookie-disclaimer__button",
+  "Cookie Accept Button": "#onetrust-accept-btn-handler",
   "Header Logo": ".header__logo",
   "Search Form": ".job-search",
   "Location Filter Box": ".select2-selection__rendered",
@@ -8,6 +8,8 @@
   "Selected Department": ".selected-items .filter-tag",
   "Department Filter Box": ".job-search__departments",
   "Department Filter Box Label": ".job-search__departments .selected-label",
+  "Skill Type Filter Box": ".job-search__departments",
+  "Skill Type Filter Box Label": ".job-search__departments .default-label",
   "Search Button": ".recruiting-search__submit",
   "Expand Country Button": "li.select2-results__option.dropdown-cities strong",
   "Job Description": ".recruiting-page__top-description"
